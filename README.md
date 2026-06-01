@@ -10,6 +10,14 @@
 
 <p align="center"><strong>一站式科研数据处理、论文写作与协作平台</strong><br>从立项到发表，覆盖科研工作的每一个环节。</p>
 
+<p align="center">
+  <a href="https://gwennsteglik252-create.github.io/sciflow-downloads/"><strong>进入镜像下载页</strong></a>
+  ·
+  <a href="https://github.com/gwennsteglik252-create/sciflow-downloads/releases/tag/v1.3.0">GitHub Release 备用下载</a>
+</p>
+
+> 推荐从镜像下载页进入。该公开仓库只用于展示 README、授权条款、截图和安装包下载入口，不包含 SciFlow Pro 源码。
+
 ---
 
 ## ✨ 核心亮点
