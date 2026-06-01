@@ -1,7 +1,7 @@
 <h1 align="center">🧬 SciFlow Pro — 科研全流程智能工作站</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/版本-v1.2.0-blue?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/版本-v1.3.0-blue?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/平台-macOS%20|%20Windows%20|%20Android-brightgreen?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/AI%20引擎-GPT--5%20|%20Gemini%20|%20Claude%20|%20DeepSeek-purple?style=flat-square" alt="AI" />
   <img src="https://img.shields.io/badge/架构-本地优先-orange?style=flat-square" alt="Architecture" />
@@ -24,23 +24,23 @@
 
 ---
 
-## 🆕 v1.2.0 最新发布
+## 🆕 v1.3.0 最新发布
 
-SciFlow Pro v1.2.0 聚焦“从科研想法到实验执行再到写作发表”的连续工作流升级：
+SciFlow Pro v1.3.0 聚焦发布分发、授权保护与公开下载入口整理：
 
-- **智能通知与自动化引擎**：实验截止提醒、库存预警、文献追踪、自动周报与本地规则触发。
-- **研究笔记本与知识库**：自由笔记、结构化实验日志、PDF 批注同步、知识沉淀与 AI 检索。
-- **移动端伴侣**：窄屏视图、底部导航、通知徽章与实验现场快速记录。
-- **科研数据与图组增强**：表征分析、综述图组装配、数据实验室、DOE/ML 推荐与路线分类联动。
-- **本地优先集成**：Electron 本地 API、Codex skills、Feishu/KDocs 自动化与可扩展 Agent 工作流。
+- **源码私有化**：源码仓库保持私有，不再作为公开下载入口暴露。
+- **公开安装包分发**：Windows、macOS、Android 安装包统一通过公开下载仓库发布。
+- **专有授权声明**：README 与发布页改为 Proprietary / All Rights Reserved，不再标注 MIT 开源授权。
+- **更新入口修正**：桌面端检查更新与下载入口指向公开 Release 页面。
+- **版本标识统一**：桌面端、Android、README、安装包文件名与 Release tag 统一为 v1.3.0。
 
 ## 📦 下载安装
 
 | 平台 | 下载链接 | 系统要求 |
 |:----:|---------|---------|
-| 🍎 **macOS** | [SciFlow-Pro-v1.2.0-arm64.dmg](https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.2.0/SciFlow-Pro-1.2.0-arm64.dmg) | macOS 12+ (Apple Silicon) |
-| 🪟 **Windows** | [SciFlow-Pro-Setup-v1.2.0.exe](https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.2.0/SciFlow-Pro-Setup-1.2.0.exe) | Windows 10/11 (64-bit) |
-| 📱 **Android** | [SciFlow-Pro-v1.2.0-android.apk](https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.2.0/SciFlow-Pro-1.2.0-android.apk) | Android 8+ |
+| 🍎 **macOS** | [SciFlow-Pro-v1.3.0-arm64.dmg](https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.3.0/SciFlow-Pro-1.3.0-arm64.dmg) | macOS 12+ (Apple Silicon) |
+| 🪟 **Windows** | [SciFlow-Pro-Setup-v1.3.0.exe](https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.3.0/SciFlow-Pro-Setup-1.3.0.exe) | Windows 10/11 (64-bit) |
+| 📱 **Android** | [SciFlow-Pro-v1.3.0-android.apk](https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.3.0/SciFlow-Pro-1.3.0-android.apk) | Android 8+ |
 
 <details>
 <summary>🪟 <strong>Windows 安装步骤</strong>（点击展开）</summary>
@@ -688,6 +688,15 @@ sudo xattr -cr "/Applications/SciFlow Pro.app"
 ---
 
 ## 📋 更新日志
+
+### v1.3.0 (2026-06-01)
+🔐 **发布与授权分发更新**
+
+- 🔒 **源码仓库私有化**：源码与构建配置保留在私有仓库，公开仓库只提供 README 和安装包下载。
+- 📦 **公开下载仓库**：Windows、macOS、Android 安装包统一发布到 `sciflow-downloads`。
+- 🛡️ **专有授权声明**：README 徽章和发布说明统一改为 Proprietary / All Rights Reserved。
+- 🔄 **更新检查入口修正**：桌面端自动更新检查和下载页面指向公开 Release。
+- 🧾 **版本标识统一**：项目版本、Android versionName/versionCode、安装包文件名和 Release tag 统一为 v1.3.0。
 
 ### v1.2.0 (2026-03-23)
 🚀 **研究全流程智能化升级**
