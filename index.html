@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SciFlow Pro v1.3.0 下载</title>
+  <meta name="description" content="SciFlow Pro v1.3.0 专有软件安装包下载页。">
+  <meta name="robots" content="index,follow">
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #596579;
+      --soft: #eef2f7;
+      --line: #d8e0eb;
+      --panel: #ffffff;
+      --accent: #2563eb;
+      --accent-dark: #1746a2;
+      --mint: #0f766e;
+      --warn: #9a3412;
+      --bg: #f6f8fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(216, 224, 235, 0.86);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner,
+    .section,
+    .hero-inner {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 64px;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      color: #fff;
+      background: #1f4b99;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      padding: 8px 10px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 7px;
+    }
+
+    .nav a:hover {
+      color: var(--ink);
+      background: var(--soft);
+    }
+
+    .hero {
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 0.94fr) minmax(360px, 1.06fr);
+      gap: 40px;
+      align-items: center;
+      padding: 64px 0 36px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--mint);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 680px;
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 22px 0 0;
+      max-width: 660px;
+      color: #3e4a5d;
+      font-size: 18px;
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0 0;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfe;
+      color: #314156;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .hero-media {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #e9eef6;
+      box-shadow: 0 18px 48px rgba(31, 75, 153, 0.12);
+    }
+
+    .hero-media img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10.35;
+      object-fit: cover;
+      object-position: top left;
+    }
+
+    .section {
+      padding: 44px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 520px;
+    }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .download-card,
+    .info-panel,
+    .feature,
+    .shot {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .download-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 260px;
+      padding: 20px;
+    }
+
+    .platform {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .platform h3 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    .platform-tag {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .download-card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .button-stack {
+      display: grid;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 42px;
+      padding: 10px 14px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .button.primary {
+      color: #fff;
+      background: var(--accent);
+    }
+
+    .button.primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .button.secondary {
+      color: #1f3554;
+      background: #f9fbfe;
+      border-color: var(--line);
+    }
+
+    .button.secondary:hover {
+      background: var(--soft);
+    }
+
+    .button[aria-disabled="true"] {
+      pointer-events: none;
+      color: #7b8796;
+      background: #eef1f5;
+      border-color: #dce3ec;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 16px;
+    }
+
+    .info-panel {
+      padding: 20px;
+    }
+
+    .info-panel h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .info-panel p,
+    .info-panel li {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .info-panel p {
+      margin: 0;
+    }
+
+    .info-panel ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .feature {
+      padding: 18px;
+    }
+
+    .feature h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .screens {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .shot {
+      overflow: hidden;
+    }
+
+    .shot img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10.35;
+      object-fit: cover;
+      object-position: top left;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .shot span {
+      display: block;
+      padding: 10px 12px;
+      color: #334155;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    .footer-inner {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .warning {
+      color: var(--warn);
+      font-weight: 800;
+    }
+
+    @media (max-width: 940px) {
+      .hero-inner,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .download-grid,
+      .feature-grid,
+      .screens {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-inner {
+        padding-top: 42px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px 0;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .download-grid,
+      .feature-grid,
+      .screens {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand" aria-label="SciFlow Pro">
+        <span class="brand-mark">S</span>
+        <span>SciFlow Pro</span>
+      </div>
+      <nav class="nav" aria-label="页面导航">
+        <a href="#download">下载</a>
+        <a href="#updates">v1.3 更新</a>
+        <a href="#screenshots">截图</a>
+        <a href="#license">授权</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">v1.3.0 · Proprietary · All Rights Reserved</p>
+          <h1>SciFlow Pro</h1>
+          <p class="lead">面向真实科研流程的本地优先工作站，覆盖课题管理、实验日志、文献知识库、数据分析、科研绘图、写作与 AI 自动化。</p>
+          <div class="status-row" aria-label="发布状态">
+            <span class="status">公开安装包</span>
+            <span class="status">源码不公开</span>
+            <span class="status">需要授权使用</span>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img src="./assets/screenshots/dashboard_new.png" alt="SciFlow Pro 研究看板界面截图">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="download">
+      <div class="section-heading">
+        <h2>下载安装包</h2>
+        <p class="section-note">国内镜像链接接入 CDN 后会作为主下载入口；GitHub Release 保留为备用下载。</p>
+      </div>
+      <div class="download-grid" id="download-grid">
+        <article class="download-card" data-platform="windows">
+          <div class="platform">
+            <h3>Windows</h3>
+            <span class="platform-tag">Windows 10/11 · 64-bit</span>
+          </div>
+          <p>SciFlow Pro 桌面安装程序，适合 Windows 工作站和实验室电脑。</p>
+          <div class="button-stack">
+            <a class="button primary mirror-link" href="#" aria-disabled="true">国内镜像待接入</a>
+            <a class="button secondary github-link" href="https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.3.0/SciFlow-Pro-Setup-1.3.0.exe">GitHub 备用下载</a>
+          </div>
+        </article>
+        <article class="download-card" data-platform="macos">
+          <div class="platform">
+            <h3>macOS</h3>
+            <span class="platform-tag">macOS 12+ · Apple Silicon</span>
+          </div>
+          <p>适用于 Apple Silicon Mac 的 DMG 安装包。首次打开如遇系统拦截，请在隐私与安全性中允许。</p>
+          <div class="button-stack">
+            <a class="button primary mirror-link" href="#" aria-disabled="true">国内镜像待接入</a>
+            <a class="button secondary github-link" href="https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.3.0/SciFlow-Pro-1.3.0-arm64.dmg">GitHub 备用下载</a>
+          </div>
+        </article>
+        <article class="download-card" data-platform="android">
+          <div class="platform">
+            <h3>Android</h3>
+            <span class="platform-tag">Android 8+</span>
+          </div>
+          <p>移动端 APK 安装包，用于移动记录、查看和轻量协作场景。</p>
+          <div class="button-stack">
+            <a class="button primary mirror-link" href="#" aria-disabled="true">国内镜像待接入</a>
+            <a class="button secondary github-link" href="https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.3.0/SciFlow-Pro-1.3.0-android.apk">GitHub 备用下载</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="updates">
+      <div class="section-heading">
+        <h2>v1.3.0 重点更新</h2>
+        <p class="section-note">本版本从单点工具升级为连续推进课题、沉淀实验、分析数据和生成成果的科研工作站。</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature">
+          <h3>课题中心升级</h3>
+          <p>强化项目看板、任务计划、实验路线、日志和阶段目标之间的连续追踪。</p>
+        </article>
+        <article class="feature">
+          <h3>实验流程闭环</h3>
+          <p>样品、库存、实验日志、表征结果和报告生成之间形成更稳定的回溯链路。</p>
+        </article>
+        <article class="feature">
+          <h3>数据分析增强</h3>
+          <p>面向 XRD、BET、RDE、图表拼版和科研绘图场景优化分析与展示入口。</p>
+        </article>
+        <article class="feature">
+          <h3>文献知识库</h3>
+          <p>改进文献检索、情报档案、知识沉淀和综述写作的协同流程。</p>
+        </article>
+        <article class="feature">
+          <h3>AI 自动化</h3>
+          <p>围绕通知、周报、规则引擎、写作助手和跨模块工作流强化 AI Agent 能力。</p>
+        </article>
+        <article class="feature">
+          <h3>授权分发规范化</h3>
+          <p>源码仓库私有化，公开页面仅提供说明、截图、安装包和专有授权条款。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="screenshots">
+      <div class="section-heading">
+        <h2>界面预览</h2>
+        <p class="section-note">截图用于展示软件能力，页面不包含 SciFlow Pro 的源码或前端应用 bundle。</p>
+      </div>
+      <div class="screens">
+        <figure class="shot">
+          <img src="./assets/screenshots/workflow_new.png" alt="课题工作流截图">
+          <span>课题工作流</span>
+        </figure>
+        <figure class="shot">
+          <img src="./assets/screenshots/literature_search_new.png" alt="文献检索截图">
+          <span>文献检索</span>
+        </figure>
+        <figure class="shot">
+          <img src="./assets/screenshots/figure_center_new.png" alt="绘图中心截图">
+          <span>绘图中心</span>
+        </figure>
+        <figure class="shot">
+          <img src="./assets/screenshots/writing_studio_new.png" alt="写作工坊截图">
+          <span>写作工坊</span>
+        </figure>
+        <figure class="shot">
+          <img src="./assets/screenshots/ai_assistant.png" alt="AI 智能助手截图">
+          <span>AI 智能助手</span>
+        </figure>
+        <figure class="shot">
+          <img src="./assets/screenshots/dashboard_new.png" alt="研究看板截图">
+          <span>研究看板</span>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="license">
+      <div class="split">
+        <article class="info-panel">
+          <h3>授权声明</h3>
+          <p>SciFlow Pro 是专有软件，保留所有权利。下载安装包不代表获得源码授权，也不允许未经授权复制、修改、分发、转售、反向工程或绕过激活机制。</p>
+        </article>
+        <article class="info-panel">
+          <h3>镜像部署注意</h3>
+          <ul>
+            <li>不要部署完整 Vite Web App 构建产物，否则会公开前端 bundle。</li>
+            <li>镜像页可以放在静态托管；安装包建议放在对象存储或 CDN。</li>
+            <li><span class="warning">CDN 地址接入前</span>，页面只提供 GitHub 备用下载，国内访问仍可能不稳定。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      Copyright &copy; 2026 SciFlow Pro. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const mirrorDownloads = {
+      windows: "",
+      macos: "",
+      android: ""
+    };
+
+    for (const card of document.querySelectorAll("[data-platform]")) {
+      const platform = card.getAttribute("data-platform");
+      const mirrorUrl = mirrorDownloads[platform];
+      const mirrorLink = card.querySelector(".mirror-link");
+
+      if (mirrorUrl && /^https?:\/\//.test(mirrorUrl)) {
+        mirrorLink.href = mirrorUrl;
+        mirrorLink.removeAttribute("aria-disabled");
+        mirrorLink.textContent = "国内镜像下载";
+      }
+    }
+  </script>
+</body>
+</html>
