@@ -6,6 +6,7 @@ It is intentionally separate from the Vite/Electron application source and can b
 ## What This Publishes
 
 - `index.html`: static homepage with product positioning, workflow, module system, plugin library plan, screenshots, download buttons, and license notice.
+- `reset-password/index.html`: public Supabase password-recovery page for `https://www.sciflowpro.cn/reset-password/index.html`.
 - `BRAND.md`: public homepage brand-system notes for logo, color tokens, icon style, and product-tour layout.
 - `assets/brand/`: SciFlow Pro SVG mark and wordmark.
 - `assets/screenshots/`: selected product screenshots.
@@ -98,6 +99,7 @@ For a real no-proxy download path, both the page and the installer files need to
 ## Current Homepage Status
 
 - Public URL: `https://www.sciflowpro.cn/`
+- Password reset URL: `https://www.sciflowpro.cn/reset-password/index.html`
 - CDN domain: `www.sciflowpro.cn`
 - CNAME: `www.sciflowpro.cn.queniuaa.com`
 - Origin: `sciflow-plugins-1329180323221987.oss-cn-hangzhou.aliyuncs.com`

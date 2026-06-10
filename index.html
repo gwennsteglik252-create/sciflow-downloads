@@ -561,8 +561,7 @@
     .statement-grid,
     .module-grid,
     .workflow-grid,
-    .audience-grid,
-    .download-grid {
+    .audience-grid {
       display: grid;
       gap: 14px;
     }
@@ -580,10 +579,6 @@
     }
 
     .audience-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .download-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
@@ -834,19 +829,21 @@
       color: #9bf2dd;
     }
 
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
     .download-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 274px;
+      display: grid;
+      gap: 16px;
       padding: 20px;
     }
 
     .platform {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 12px;
+      display: grid;
+      gap: 6px;
     }
 
     .platform h3 {
@@ -859,11 +856,11 @@
       color: var(--muted);
       font-size: 12px;
       font-weight: 850;
-      text-align: right;
+      text-align: left;
     }
 
     .download-card p {
-      margin: 0 0 18px;
+      margin: 0;
       color: var(--muted);
       font-size: 14px;
     }
@@ -872,7 +869,7 @@
       display: grid;
       gap: 1px;
       overflow: hidden;
-      margin: 0 0 18px;
+      margin: 0;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--line);
@@ -880,7 +877,7 @@
 
     .download-meta div {
       display: grid;
-      grid-template-columns: 64px minmax(0, 1fr);
+      grid-template-columns: 72px minmax(0, 1fr);
       background: #f8fbff;
     }
 
@@ -911,6 +908,16 @@
       font-size: 11px;
       font-weight: 760;
       overflow-wrap: anywhere;
+    }
+
+    .button-stack {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .button-stack .button {
+      width: 100%;
     }
 
     .checksum-link {
@@ -959,16 +966,6 @@
       font-size: 12px;
       font-weight: 850;
       white-space: nowrap;
-    }
-
-    .button-stack {
-      display: grid;
-      gap: 10px;
-      margin-top: auto;
-    }
-
-    .button-stack .button {
-      width: 100%;
     }
 
     .product-tour {
@@ -1302,6 +1299,24 @@
       .install-notes,
       .showcase,
       .tour-item {
+        grid-template-columns: 1fr;
+      }
+
+      .platform {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .platform-tag {
+        text-align: left;
+      }
+
+      .download-meta div {
+        grid-template-columns: 78px minmax(0, 1fr);
+      }
+
+      .button-stack {
         grid-template-columns: 1fr;
       }
 
@@ -1709,15 +1724,15 @@
           </dl>
           <div class="button-stack">
             <a class="button primary github-link" href="https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.3.7/SciFlow-Pro-Setup-1.3.7.exe">下载 Windows 安装包</a>
-            <a class="button light mirror-link" href="#" aria-disabled="true">CDN 镜像待接入</a>
+            <a class="button light mirror-link" href="#" aria-disabled="true">Windows CDN 镜像</a>
           </div>
         </article>
         <article class="download-card" data-platform="macos">
           <div class="platform">
             <h3>macOS</h3>
-            <span class="platform-tag">macOS 12+ · Apple Silicon / Intel</span>
+            <span class="platform-tag">Apple Silicon · macOS 12+</span>
           </div>
-          <p>提供 Apple Silicon 与 Intel Mac 的 DMG 安装包。首次打开如遇系统拦截，请按安装提示解除安全限制。</p>
+          <p>适合 M 系列芯片 Mac 的 DMG 安装包。首次打开如遇系统拦截，请按安装提示解除安全限制。</p>
           <dl class="download-meta" aria-label="macOS Apple Silicon 安装包校验信息">
             <div>
               <dt>文件</dt>
@@ -1732,6 +1747,17 @@
               <dd><code>0fc4b8f637250c81fe5a088d183edb2dd11811716ed0914b673f9a6e6ab6aedb</code></dd>
             </div>
           </dl>
+          <div class="button-stack">
+            <a class="button primary github-link" href="https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.3.7/SciFlow-Pro-1.3.7-arm64.dmg">下载 Apple Silicon 安装包</a>
+            <a class="button light mirror-link" data-mirror-platform="macosArm64" href="#" aria-disabled="true">Apple Silicon CDN 镜像</a>
+          </div>
+        </article>
+        <article class="download-card" data-platform="macos">
+          <div class="platform">
+            <h3>macOS</h3>
+            <span class="platform-tag">Intel · macOS 12+</span>
+          </div>
+          <p>适合 Intel 芯片 Mac 的 DMG 安装包。首次打开如遇系统拦截，请按安装提示解除安全限制。</p>
           <dl class="download-meta" aria-label="macOS Intel 安装包校验信息">
             <div>
               <dt>文件</dt>
@@ -1747,8 +1773,6 @@
             </div>
           </dl>
           <div class="button-stack">
-            <a class="button primary github-link" href="https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.3.7/SciFlow-Pro-1.3.7-arm64.dmg">下载 Apple Silicon 安装包</a>
-            <a class="button light mirror-link" data-mirror-platform="macosArm64" href="#" aria-disabled="true">Apple Silicon CDN 镜像</a>
             <a class="button primary github-link" href="https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.3.7/SciFlow-Pro-1.3.7-x64.dmg">下载 Intel 安装包</a>
             <a class="button light mirror-link" data-mirror-platform="macosX64" href="#" aria-disabled="true">Intel CDN 镜像</a>
           </div>
@@ -1775,7 +1799,7 @@
           </dl>
           <div class="button-stack">
             <a class="button primary github-link" href="https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/v1.3.7/SciFlow-Pro-1.3.7-android.apk">下载 Android APK</a>
-            <a class="button light mirror-link" href="#" aria-disabled="true">CDN 镜像待接入</a>
+            <a class="button light mirror-link" href="#" aria-disabled="true">Android CDN 镜像</a>
           </div>
         </article>
       </div>
