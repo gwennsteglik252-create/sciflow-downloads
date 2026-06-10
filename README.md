@@ -23,6 +23,8 @@ Upload the installers to object storage or CDN, then replace the empty values in
 const mirrorDownloads = {
   windows: "",
   macos: "",
+  macosArm64: "",
+  macosX64: "",
   android: ""
 };
 ```
@@ -31,6 +33,7 @@ Expected file names:
 
 - `SciFlow-Pro-Setup-1.3.7.exe`
 - `SciFlow-Pro-1.3.7-arm64.dmg`
+- `SciFlow-Pro-1.3.7-x64.dmg`
 - `SciFlow-Pro-1.3.7-android.apk`
 
 Until those URLs are filled in, the page keeps GitHub Release links as backup downloads.
