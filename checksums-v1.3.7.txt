@@ -1,0 +1,7 @@
+# SciFlow Pro v1.3.7 release checksums
+# Source: sha256 of published GitHub Release installers
+# Date: 2026-06-10
+
+34ba05b496adc04c3837e9e14af933771a0f13aabb39da8399aaf801c77a4aa2  SciFlow-Pro-Setup-1.3.7.exe
+0fc4b8f637250c81fe5a088d183edb2dd11811716ed0914b673f9a6e6ab6aedb  SciFlow-Pro-1.3.7-arm64.dmg
+27ed8512c34e2d58a495b45061abb274166a44d6cdbf53af94300f0d3ef65170  SciFlow-Pro-1.3.7-android.apk
