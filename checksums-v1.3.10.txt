@@ -2,7 +2,7 @@
 # Source: sha256 digests from published GitHub Release assets
 # Date: 2026-06-11
 
-5931061ca58c68ca03fd474795b6e2675a3c7dbfa5cf4b6f935e88a579cb61f3  latest-mac.yml
+80fb003965eb425452b0850c85c5cd67ac3c10ebca2ba715ce34a0f32ac681f5  latest-mac.yml
 0429eee1b0f1513bfcb1930cb5927e478ab07d5b668e1bc82ffa0792c91f7bbc  latest.yml
 578702fc1e2363421f39356326c395470ddbfabbc83514559ca854681c824d12  SciFlow-Pro-1.3.10-android.apk
 14f65be5c7104cf883503dc1d4a2b2c26351b8efb6b7ac00238b7a8ffd82fb03  SciFlow-Pro-1.3.10-arm64.dmg
