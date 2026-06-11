@@ -1,0 +1,17 @@
+# SciFlow Pro v1.3.10 release checksums
+# Source: sha256 digests from published GitHub Release assets
+# Date: 2026-06-11
+
+5931061ca58c68ca03fd474795b6e2675a3c7dbfa5cf4b6f935e88a579cb61f3  latest-mac.yml
+0429eee1b0f1513bfcb1930cb5927e478ab07d5b668e1bc82ffa0792c91f7bbc  latest.yml
+578702fc1e2363421f39356326c395470ddbfabbc83514559ca854681c824d12  SciFlow-Pro-1.3.10-android.apk
+14f65be5c7104cf883503dc1d4a2b2c26351b8efb6b7ac00238b7a8ffd82fb03  SciFlow-Pro-1.3.10-arm64.dmg
+4b0baf77c484c88e1a2f1e81cf954aa2c17f26610d2da088f127d012cbd5d9ca  SciFlow-Pro-1.3.10-arm64.dmg.blockmap
+aa545ed1ce1bfcde6a38d9a67bb40392832baa29d665d454a716f661ec32f201  SciFlow-Pro-1.3.10-arm64.zip
+d1d0703d9edc786b2677912e5838405d0b7f619612b507b3edc57c0e5177f212  SciFlow-Pro-1.3.10-arm64.zip.blockmap
+08055c15e9abb8dd1d6631ce99906bef34d15f25b4f2f60930cafee5f2b5c7d4  SciFlow-Pro-1.3.10-x64.dmg
+da5904f3b5afa3518061017535df30639cccd6c933333bb0f8330f81d18e4c36  SciFlow-Pro-1.3.10-x64.dmg.blockmap
+1803eedf3b0a89ef34e628d280d54d620e00e76016b91ebdea36d13a726d7053  SciFlow-Pro-1.3.10-x64.zip
+ce6b2d6106b84b3549a308294b7623fcf8fe8cc2ac0d2c036bb46e3ea403c695  SciFlow-Pro-1.3.10-x64.zip.blockmap
+76c0a365dbde7d0a0d9faf55ef42a2c14871ee30d005b840fe057037aa37806c  SciFlow-Pro-Setup-1.3.10.exe
+814636f1031db87fc1a7480a90473ece2cf6c48d8426088031f74818b91def8f  SciFlow-Pro-Setup-1.3.10.exe.blockmap
