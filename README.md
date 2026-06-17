@@ -1,6 +1,6 @@
 # SciFlow Pro Public Homepage
 
-This folder is a standalone public homepage and download mirror for SciFlow Pro v1.3.12.
+This folder is a standalone public homepage and download mirror for SciFlow Pro v1.3.13.
 It is intentionally separate from the Vite/Electron application source and can be deployed directly to a cloud server as a static site.
 
 ## What This Publishes
@@ -32,10 +32,8 @@ const mirrorDownloads = {
 
 Expected file names:
 
-- `SciFlow-Pro-Setup-1.3.12.exe`
-- `SciFlow-Pro-1.3.12-arm64.dmg`
-- `SciFlow-Pro-1.3.12-x64.dmg`
-- `SciFlow-Pro-1.3.12-android.apk`
+- `SciFlow-Pro-Setup-1.3.13.exe`
+- `SciFlow-Pro-1.3.13-arm64.dmg`
 
 Until those URLs are filled in, the page keeps GitHub Release links as backup downloads.
 
