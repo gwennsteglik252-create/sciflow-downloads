@@ -1,89 +1,37 @@
 # SciFlow Pro Public Homepage
 
-This folder is a standalone public homepage and download mirror for SciFlow Pro v1.3.13.
-It is intentionally separate from the Vite/Electron application source and can be deployed directly to a cloud server as a static site.
+This folder is the standalone GitHub Pages download site for SciFlow Pro v1.3.15 desktop builds.
+It is intentionally separate from the Vite/Electron application source and must publish only static product information and download links.
 
 ## What This Publishes
 
 - `index.html`: static homepage with product positioning, workflow, module system, plugin library plan, screenshots, download buttons, and license notice.
-- `reset-password/index.html`: public Supabase password-recovery page for `https://www.sciflowpro.cn/reset-password/index.html`.
+- `reset-password/index.html`: public Supabase password-recovery page; keep the configured redirect URL aligned with the active static-site host.
 - `BRAND.md`: public homepage brand-system notes for logo, color tokens, icon style, and product-tour layout.
 - `assets/brand/`: SciFlow Pro SVG mark and wordmark.
 - `assets/screenshots/`: selected product screenshots.
-- `installers/`: local staging folder for release installers; binaries are ignored by Git and should be uploaded to object storage or CDN.
+- `installers/`: optional local staging folder; binaries are ignored by Git and must not be committed to the Pages branch.
 
 ## What This Must Not Publish
 
 Do not deploy the normal Vite build output from `dist/` or `dist_surge/` as the public mirror. Those folders contain frontend application bundles. They are not raw source code, but they still expose client-side app implementation details.
 
-## CDN Setup
+## GitHub Release Distribution
 
-Upload the installers to object storage or CDN, then replace the empty values in `index.html`:
+Publish installers and updater metadata to the public `gwennsteglik252-create/sciflow-downloads` Release. Point every download button in `index.html` directly to the versioned Release asset URL:
 
-```js
-const mirrorDownloads = {
-  windows: "",
-  macos: "",
-  macosArm64: "",
-  macosX64: "",
-  android: ""
-};
+```text
+https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/vX.Y.Z/<asset-name>
 ```
 
 Expected file names:
 
-- `SciFlow-Pro-Setup-1.3.13.exe`
-- `SciFlow-Pro-1.3.13-arm64.dmg`
+- `SciFlow-Pro-Setup-1.3.15.exe`
+- `SciFlow-Pro-1.3.15-arm64.dmg`
+- `SciFlow-Pro-1.3.15-arm64.zip`
+- `latest.yml` and `latest-mac.yml` for desktop auto-update metadata.
 
-Until those URLs are filled in, the page keeps GitHub Release links as backup downloads.
-
-## Cloud Server Deployment
-
-Upload the contents of this folder, not the folder itself, to the static site root:
-
-```bash
-download-mirror/
-  index.html
-  assets/
-  installers/
-```
-
-Example server path:
-
-```bash
-/var/www/sciflowpro/
-  index.html
-  assets/
-  installers/
-```
-
-Minimal Nginx server block:
-
-```nginx
-server {
-  listen 80;
-  server_name sciflowpro.cn www.sciflowpro.cn;
-
-  root /var/www/sciflowpro;
-  index index.html;
-
-  location / {
-    try_files $uri $uri/ /index.html;
-  }
-
-  location ~* \.(png|jpg|jpeg|webp|svg|css|js)$ {
-    expires 7d;
-    add_header Cache-Control "public, max-age=604800";
-  }
-}
-```
-
-Recommended split:
-
-- Static page: Vercel, Netlify, Cloudflare Pages, Gitee Pages, or another static host.
-- Large installers: Aliyun OSS, Tencent COS, Qiniu, Cloudflare R2, or another object storage service with CDN.
-
-For a real no-proxy download path, both the page and the installer files need to be reachable outside GitHub.
+The default release path does not upload installers or updater metadata to Aliyun OSS/CDN. Publish only this folder's static files to the public repository's `gh-pages` branch.
 
 ## Current Plugin Distribution Status
 
@@ -94,14 +42,10 @@ For a real no-proxy download path, both the page and the installer files need to
 - Default plugin index URL: `https://plugins.sciflowpro.cn/plugins/index.json`
 - Remaining production step: complete ICP filing and switch CDN coverage from overseas to domestic when ready.
 
-## Current Homepage Status
+## Current Download Page Status
 
-- Public URL: `https://www.sciflowpro.cn/`
-- Password reset URL: `https://www.sciflowpro.cn/reset-password/index.html`
-- CDN domain: `www.sciflowpro.cn`
-- CNAME: `www.sciflowpro.cn.queniuaa.com`
-- Origin: `sciflow-plugins-1329180323221987.oss-cn-hangzhou.aliyuncs.com`
-- Root object: `/index.html`
-- Current state: HTTPS works through Aliyun CDN private OSS origin.
-- Certificate: Let's Encrypt, expires on 2026-08-31.
-- Local access note: if this Mac resolves `www.sciflowpro.cn` to `198.18.*`, Clash Verge fake-ip filtering must include `*.sciflowpro.cn` and `*.queniuaa.com`.
+- Public URL: `https://gwennsteglik252-create.github.io/sciflow-downloads/`
+- Source: public `sciflow-downloads` repository, `gh-pages` branch.
+- Installer source: versioned assets in the public GitHub Release.
+- Desktop updater source: `latest.yml`, `latest-mac.yml`, installers, zip files, and blockmaps in the same Release.
+- Aliyun OSS/CDN is not part of the default release or verification path.
