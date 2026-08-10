@@ -1,0 +1,7 @@
+# SciFlow Pro v1.3.16 Windows release checksums
+# Source: sha256 digests from public GitHub Release assets
+# Date: 2026-08-11
+
+664dd94342422802c511be25926494e4c59d1e3a2a0c0cf64518b2c945449442  SciFlow-Pro-Setup-1.3.16.exe
+048d3e8fab4db7e1827c9fd92754393d098d64980fac0a8b5b75e26b4466cdb4  SciFlow-Pro-Setup-1.3.16.exe.blockmap
+e7ce05df503a3e80d38847c13378e082df28d26878fc80be80f92dd50e1ed2ee  latest.yml
