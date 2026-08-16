@@ -1,0 +1,12 @@
+# SciFlow Pro v1.3.17 desktop release checksums
+# Source: sha256 digests from public GitHub Release assets
+# Date: 2026-08-17
+
+4c007488790569ed74cbda6897ed94fd2ba63deabae1d11cbae056efa6eb8bfe  SciFlow-Pro-Setup-1.3.17.exe
+348e7bc328e3333bc54f209bf202826da0fa8100748001728a4992ab604c7845  SciFlow-Pro-Setup-1.3.17.exe.blockmap
+685c2114f92746a4cac0bbbf04bd41e6d44cd1b2a6466f0f1a7867dfd6a31c2e  latest.yml
+9ff7a7ffc36d2bc97c543be5ce7631172ca3de7896de958e54cbcfa4e2da73ea  SciFlow-Pro-1.3.17-arm64.dmg
+3b92904813e8fe52a29f97e3637f526edb33fe75c1550811633e77c667725ad0  SciFlow-Pro-1.3.17-arm64.dmg.blockmap
+f5f30828e084b5eebd5e93a54001f93b03bcaa6b68c6f460d928e82d79ef0f68  SciFlow-Pro-1.3.17-arm64.zip
+731b5b09ce78b669096a0bc3c50f624252bf6866cab95cda477fedaa907a50db  SciFlow-Pro-1.3.17-arm64.zip.blockmap
+0904e972e770e4822d5b8002f0330842c310c35048e91711872ed8b1f28aca75  latest-mac.yml
