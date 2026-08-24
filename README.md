@@ -1,6 +1,6 @@
 # SciFlow Pro Public Homepage
 
-This folder is the standalone GitHub Pages download site for SciFlow Pro Windows and macOS Apple Silicon v1.3.17 desktop downloads.
+This folder is the standalone GitHub Pages download site for SciFlow Pro Windows and macOS Apple Silicon v1.3.18 desktop downloads.
 It is intentionally separate from the Vite/Electron application source and must publish only static product information and download links.
 
 ## What This Publishes
@@ -26,9 +26,9 @@ https://github.com/gwennsteglik252-create/sciflow-downloads/releases/download/vX
 
 Expected file names:
 
-- `SciFlow-Pro-Setup-1.3.17.exe`
-- `SciFlow-Pro-1.3.17-arm64.dmg`
-- `SciFlow-Pro-1.3.17-arm64.zip`
+- `SciFlow-Pro-Setup-1.3.18.exe`
+- `SciFlow-Pro-1.3.18-arm64.dmg`
+- `SciFlow-Pro-1.3.18-arm64.zip`
 - `latest.yml` and `latest-mac.yml` for desktop auto-update metadata.
 
 The default release path does not upload installers or updater metadata to Aliyun OSS/CDN. Publish only this folder's static files to the public repository's `gh-pages` branch.
